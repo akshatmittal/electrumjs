@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Electrum Online Balance Checker - Electrum JS</title>
+	<link rel="canonical" href="http://akshatmittal.github.io/electrumjs/" >
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@itsreallyakshat">
+	<meta name="twitter:title" content="Electrum Online Balance Checker">
+	<meta name="twitter:description" content="Online Balance checker for Electrum HD Wallet for Bitcoin. Electrum JS">
+	<meta name="twitter:creator" content="@itsreallyakshat">
+	<meta name="twitter:image" content="http://akshatmittal.github.io/electrumjs/icon.png">
+	<meta property="og:title" content="Electrum Online Balance Checker" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://akshatmittal.github.io/electrumjs/" />
+	<meta property="og:image" content="http://akshatmittal.github.io/electrumjs/icon.png" />
+	<meta property="og:description" content="Online Balance checker for Electrum HD Wallet for Bitcoin. Electrum JS" /> 
+	<meta property="og:site_name" content="Akshat Mittal" />
+	<meta property="fb:admins" content="100000581280466" />
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="cover">
+		<h1>Electrum JS</h1>
+	</div>
+	<div id="main" class="top">
+		<img src="assets/load.gif" class="preload"/>
+		<img src="assets/tick.png" class="preload"/>
+		<h1>Electrum Online Balance Checker</h1><br>
+		<div class="group">
+	    <input type="text" required id="mpk">
+	    <span class="highlight"></span>
+	    <span class="bar"></span>
+	    <label>Master Public Key</label>
+	  </div>
+	  <button class="raised" onclick="processKey()" id="proBut" disabled>Check Balance</button>
+	  <br><br>
+	  <div id="res">Enter your Master Public Key to continue.<br><br>
+	  	Electrum is a HD Client for Bitcoin and uses the elliptic curve cryptography to generate addresses. This is a simple client-side script which is capable of generating the addresses from the master public key found in Electrum. This only gives enough access to the web app to read addresses but not spend any balance in them.<br><br>
+	  	The script/application is completely offline except for balance retrieval. It uses Blockr API over SSL for balance determination.
+	  </div>
+	  <br>
+	  <div id="adrs">
+	  	<table id="bitfinal">
+	  		<tr><td>Total Balance:</td><td class="bitvalue" id="totl">0.00000000 BTC</td></tr>
+	  	</table>
+	  	<table id="bitrec" cellspacing="0" cellpadding="0">
+	  		<thead>
+	  			<tr>
+	  				<td colspan='4'><b>Recieving Addresses</b></td>
+	  			</tr>
+	  		</thead>
+	  		<tbody>
+
+	  		</tbody>
+	  	</table>
+	  	<table id="bitchange" cellspacing="0" cellpadding="0">
+	  		<thead>
+	  			<tr>
+	  				<td colspan='4'><b>Change Addresses</b></td>
+	  			</tr>
+	  		</thead>
+	  		<tbody>
+
+				</tbody>	  		
+	  	</table>
+	  </div>
+	</div>
+	<div id="main">
+		<p> &copy; Akshat Mittal. This is an <a href="http://github.com/akshatmittal/electrumjs/">open-source</a> project under the MIT license.</p>
+		<div class="fb-like" data-href="http://akshatmittal.github.io/electrumjs/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div> <div class="fb-follow" data-href="https://www.facebook.com/itsreallyakshat" data-colorscheme="light" data-layout="button_count" data-show-faces="false"></div> <a href="https://twitter.com/itsreallyakshat" class="twitter-follow-button" data-show-count="false" data-size="medium">Follow @itsreallyakshat</a> <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Online%20Balance%20Checker%20for%20Electrum%20by%20%40itsreallyakshat!%20#bitcoin" data-show-count="false" data-size="medium">Tweet</a><div class="changetip_tipme_button" data-bid="3b4e074d-6ec3-468b-b4df-7007dd48363e" data-uid="irrjDBNf4ke5H6zsnkVDXm"></div>
+	</div>
+	<script type="text/javascript" src="assets/ec/jsbn.js"></script>
+	<script type="text/javascript" src="assets/ec/jsbn2.js"></script>
+	<script type="text/javascript" src="assets/ec/ec.js"></script>
+	<script type="text/javascript" src="assets/ec/sec.js"></script>
+	<script type="text/javascript" src="assets/cryptojs/sha256.js"></script>
+	<script type="text/javascript" src="assets/cryptojs/ripemd160.js"></script>
+	<script type="text/javascript" src="assets/address.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
